@@ -15,3 +15,17 @@ class Finite f where
 -- check if 2 functions are same
 areSameFn :: (Finite a) => (Eq b) => (a -> b) -> (a -> b) -> Bool
 areSameFn f g = all (\a -> (f . a) One == (g . a) One) allPoints
+
+-- An empty category
+data Empty
+-- The book says there is one and only one map from Empty to other sets (including Empty),
+-- which doesn't has an arrow (or implementation)
+-- but I don't totally understand. Maybe similar to 0 ^ n == 0 ?
+-- The implementation here won't never be touched at runtime. It is just for passing the compiler's check.
+emptyToOne :: Empty -> One
+emptyToOne dummy = One
+
+-- I try to define the `onetoEmpty :: One -> Empty` here, but I can't
+-- implement it, even trying to give a dummy.
+-- The books says there is no map from non-empty set to an empty set.
+-- This is reasonable for me, because I can't write it.
