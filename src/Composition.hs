@@ -1,6 +1,12 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-import Prelude hiding ((.))
 {-# HLINT ignore "Avoid lambda" #-}
+
+-- Composition of maps.
+-- See Artical 1 and the following sessions
+module Composition where 
+
+import Prelude hiding ((.))
+
 (.) :: (b -> c) -> (a -> b) -> a -> c
 f . g = \a -> f (g a)
 

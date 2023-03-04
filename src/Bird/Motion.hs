@@ -1,6 +1,6 @@
-module Motion where
-  import Time
-  import Space
+module Main where
+  import Bird.Time
+  import Bird.Space
 
   type Motion = Time -> Space
   type HorizontalMotion = Time -> Plane

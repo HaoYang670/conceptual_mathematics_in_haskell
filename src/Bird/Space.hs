@@ -1,4 +1,4 @@
-module Space where
+module Bird.Space where
   -- Horizontal space
   data Plane = Plane
   -- Vertical space
