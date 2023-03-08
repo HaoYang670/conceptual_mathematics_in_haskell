@@ -20,6 +20,12 @@ extra-source-files:
     CHANGELOG.md
     README.md
 
+Test-Suite conceptual-mathematics-in-haskell-testsuite
+    Type:                 exitcode-stdio-1.0
+    hs-source-dirs:       test
+    Main-is:              Main.hs
+    Build-depends:        base, QuickCheck, HUnit
+
 library
     exposed-modules: Bird.Motion, Bird.Space, Bird.Time, Composition, Isomorphism
 
